@@ -1,18 +1,34 @@
 /**
  * main
  */
-public class ContohVariable24 {
+import java.util.Scanner;
+public class Siakad24 {
 public static void main(String[] args) {
-    String  salahSatuHobySayaAdalah = "Renang";
-    boolean  isPandai = true;
-    char jenisKelamin = 'L';
-    byte _umurSayaSekarang = 19;
-    double $ipk =  4.0, tinggi =1.74;
-    System.out.println("Apakah pandai?" + isPandai);
-    System.out.println("Jenis kelamin:"+ jenisKelamin);
-    System.out.println("Umurku saat ini:" + _umurSayaSekarang);
-    System.out.println(String.format("saya  beripk %s, dengan tinggi badan %s", $ipkSaya, tinggiSaya ));
-    
+    Scanner sc = new Scanner(System.in);
+    String nama, nim;
+    char kelas;
+    byte absen;
+    double nilaiKuis, nilaiTugas, nilaiUas, nilaiUts, nilaiAkhir;
+    System.out.print("Masukan nama: ");
+    nama = sc.nextLine();
+    System.out.print("Masukan NIM: ");
+    nim = sc.nextLine();
+    System.out.print("Masukan Kelas: ");
+    kelas = sc.nextLine().charAt(0);
+    System.out.print("Masukan nomor absen: ");
+    absen = sc.nextByte();
+    System.out.print("Masukan nilai kuis: ");
+    nilaiKuis = sc.nextDouble();
+    System.out.print("Masukan nilai tugas: ");
+    nilaiTugas = sc.nextDouble();
+    System.out.print("Masukan nilai Uas: ");
+    nilaiUas = sc.nextDouble();
+    System.out.print("Masukan nilai uts: ");
+    nilaiUts = sc.nextDouble();
+    nilaiAkhir = (nilaiKuis * 0.20) + (nilaiTugas * 0.15) + (nilaiUts * 0.30) + (nilaiUas * 0.35);
+    System.out.println("Nama: " + nama + "NIM: " + nim);
+    System.out.println("Kelas: " + kelas + "Absen: " + absen);
+    System.out.println("Nilai Akhir:" + nilaiAkhir);
 }
     
 }
